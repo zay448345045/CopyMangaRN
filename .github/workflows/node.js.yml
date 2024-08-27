@@ -26,8 +26,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-
-    - run: npx react-native run-android
+    - run: npm start
+    - run: npm run android
+#    - run: npx react-native run-android
     
 #    - run: npm ci
     
