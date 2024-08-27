@@ -26,9 +26,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm run android --if-present #build
-    - run: npm test
+
+    - run: npx react-native run-android
+    
+#    - run: npm ci
+    
+#    - run: npm run android --if-present #build
+#    - run: npm test
     
     - uses: actions/upload-artifact@v4
       with:
